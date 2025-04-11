@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+  Name: Dalton Blume
+  Date: 02.6.2025
+  CSC 372-01
+
+  This is the index.html page for my project. It is the home page for the Cartridge Classics website.
+  and will display the name, tagline, and search bar for the site. It will also include the links 
+  for the user to be able to navigate to the products page, the cart, and the sign in page.
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSmart - Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Cartridge Classics</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="admin-upload.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="image-row">
+        <img src="images/gameCube.jpg" alt="GameCube" class="hero uniform">
+        <img src="images/GBAblue.jpg" alt="GameBoy" class="hero uniform">
+        <img src="images/NES.jpg" alt="NES" class="hero uniform">
+        <img src="images/PS1.jpg" alt="PlayStation" class="hero uniform">
+        <img src="images/N64.jpg" alt="Nintendo 64" class="hero uniform">
+    </div>
+
+    <section class="search">
+        <input type="text" placeholder="Search for products...">
+        <button>Go</button>
+    </section>
+
+    <section class="splash">
+        <h2>Power Up Your Nostalgia!</h2>
+        <p>Create an account and find the best deals on classic games to add to your collection!</p>
+        <a href="products.html" class="shop-now">Shop Now</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cartridge Classics. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

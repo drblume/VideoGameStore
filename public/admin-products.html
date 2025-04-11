@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+  Name: Dalton Blume
+  Date: 02.28.2025
+  CSC 372-01
+
+  This is the admin-products.html page for my project. It is the page where the admin can view all of the products
+  that are available for purchase on the site. The admin can also add new products, edit existing products, delete
+  products, and archive products.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Product Listing</title>
+    <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+    <header>
+        <h1>Cartridge Classics Admin Panel</h1>
+        <nav>
+            <ul>
+                <li><a href="admin-upload.html">Bulk Upload</a></li>
+                <li><a href="admin-products.html">Product Listing</a></li>
+                <li><a href="#">Sign Out</a></li>
+                <li><a href="index.html">Back to Home Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Product Listing</h2>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search by product name or category">
+        </div>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="images/emeraldGreen.jpg" alt="Pokemon Emerald">
+                <div class="product-details">
+                    <h3>Pokemon Emerald</h3>
+                    <p>Description: Relive your childhood and purchase a hardly used copy of Pokemon Emerald for Gameboy Advance</p>
+                    <p>Category: Gameboy Advance</p>
+                    <p>Price: $18.99</p>
+                    <p>Condition: Lightly Used</p>
+                    <div class="admin-actions">
+                        <button><a href="product-edit.html">Edit</a></button>
+                        <button>Delete</button>
+                        <button>Archive</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="images/mario64.jpg" alt="Super Mario 64">
+                <div class="product-details">
+                    <h3>Super Mario 64</h3>
+                    <p>Description: Classic platformer game for the Nintendo 64</p>
+                    <p>Category: Nintendo 64</p>
+                    <p>Price: $29.99</p>
+                    <p>Condition: Good</p>
+                    <div class="admin-actions">
+                        <button><a href="product-edit.html">Edit</a></button>
+                        <button>Delete</button>
+                        <button>Archive</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more product items as needed -->
+        </div>
+        <h3>Add New Product</h3>
+        <form action="#" method="post">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <label for="product-description">Description:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
+            <label for="product-category">Category:</label>
+            <input type="text" id="product-category" name="product-category" required>
+            <label for="product-image">Image Path:</label>
+            <input type="text" id="product-image" name="product-image" required>
+            <label for="product-price">Price:</label>
+            <input type="number" id="product-price" name="product-price" step="0.01" required>
+            <label for="product-condition">Condition:</label>
+            <input type="text" id="product-condition" name="product-condition" required>
+            <button type="submit">Add Product</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2025 Cartridge Classics. All rights reserved.</p>
+    </footer>
+</body>
+</html>

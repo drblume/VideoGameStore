@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+  Name: Dalton Blume
+  Date: 02.28.2025
+  CSC 372-01
+
+  This is the cart.html page for my project. It is the page where products that a custome would 
+  like to purchase will be displayed. It will show the product image, name, price, quantity, and
+  total price for that product. It will also show the subtotal, tax, delivery fee, service fee, and 
+  total for the whole cart.
+-->
+<html lang="en">
+     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <header>
+        <h1>Cartridge Classics</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="admin-upload.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Shopping Cart</h1>
+        <div class="cart-item">
+            <img src="images/sonic.jpg" alt="Item 1" class="cart-item-image">
+            <div class="cart-item-details">
+                <h2>Sonic the Hedgehog</h2>
+                <p>Price: $12.99</p>
+                <label for="quantity1">Quantity: 1</label>
+                <button class="remove-item">Remove</button>
+                <p id="total1">Total: $12.99</p>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="images/crash.jpg" alt="Item 2" class="cart-item-image">
+            <div class="cart-item-details">
+                <h2>Crash Bandicoot 2</h2>
+                <p>Price: $19.99</p>
+                <label for="quantity2">Quantity: 2</label>
+                <button class="remove-item">Remove</button>
+                <p id="total2">Total: $39.98</p>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="images/mario64.jpg" alt="Item 3" class="cart-item-image">
+            <div class="cart-item-details">
+                <h2>Super Mario 64</h2>
+                <p>Price: $59.99</p>
+                <label for="quantity3">Quantity: 1</label>
+                <button class="remove-item">Remove</button>
+                <p id="total3">Total: $59.99</p>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <p id="subtotal">Subtotal: $112.96</p>
+            <p id="tax">Tax (6.75%): $7.62</p>
+            <p id="delivery-fee">Delivery Fee: $5.00</p>
+            <p id="service-fee">Service Fee: $2.00</p>
+            <p id="total">Total: $127.58</p>
+            <button class="checkout">Checkout</button>
+        </div>
+    </main>
+</body>
+</html>
