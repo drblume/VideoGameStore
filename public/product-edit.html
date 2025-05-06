@@ -9,12 +9,14 @@
   price, and condition. The admin will be able to edit any of these fields and save the changes.
 -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Edit Product</title>
     <link rel="stylesheet" href="styles/admin.css">
 </head>
+
 <body>
     <header>
         <h1>Cartridge Classics Admin Panel</h1>
@@ -32,27 +34,32 @@
         <form action="#" method="post">
             <label for="product-name">Product Name:</label>
             <input type="text" id="product-name" name="product-name" value="Pokemon Emerald" required>
-            
+
             <label for="product-description">Description:</label>
-            <textarea id="product-description" name="product-description" required>Relive your childhood and purchase a hardly used copy of Pokemon Emerald for Gameboy Advance</textarea>
-            
+            <textarea id="product-description" name="product-description"
+                required>Relive your childhood and purchase a hardly used copy of Pokemon Emerald for Gameboy Advance</textarea>
+
             <label for="product-category">Category:</label>
             <input type="text" id="product-category" name="product-category" value="Gameboy Advance" required>
-            
+
             <label for="product-image">Image Path:</label>
             <input type="text" id="product-image" name="product-image" value="images/emeraldGreen.jpg" required>
-            
+
             <label for="product-price">Price:</label>
             <input type="number" id="product-price" name="product-price" step="0.01" value="18.99" required>
-            
+
             <label for="product-condition">Condition:</label>
             <input type="text" id="product-condition" name="product-condition" value="Lightly Used" required>
-            
+
             <button type="submit">Save Changes</button>
         </form>
     </main>
     <footer>
         <p>&copy; 2025 Cartridge Classics. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/admin.js"></script>
 </body>
+
 </html>

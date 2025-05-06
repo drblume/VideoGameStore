@@ -12,8 +12,13 @@ exports.getCartByUserId = (user_id) => {
       WHERE c.user_id = ? AND c.status = 'new'
     `;
     db.all(query, [user_id], (err, rows) => {
-      if (err) reject(err);
-      else resolve(rows);
+      if (err) {
+        console.error("DB error:", err); // 👈 log it
+        reject(err);
+      } else {
+        console.log("DB returned rows:", rows); // 👈 log it
+        resolve(rows);
+      }
     });
   });
 };
@@ -90,3 +95,5 @@ exports.checkoutCart = (user_id) => {
     });
   });
 };
+
+

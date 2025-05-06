@@ -9,12 +9,14 @@
   in the format that is shown in the instructions section of the page.
 -->
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Bulk Upload</title>
     <link rel="stylesheet" href="styles/admin.css">
 </head>
+
 <body>
     <header>
         <h1>Cartridge Classics Admin Panel</h1>
@@ -36,7 +38,8 @@
         </form>
         <section class="instructions">
             <h3>Instructions</h3>
-            <p>Please upload a file in JSON, CSV, or TXT format. The file should contain product data in the following format:</p>
+            <p>Please upload a file in JSON, CSV, or TXT format. The file should contain product data in the following
+                format:</p>
             <pre>
 {
     "products": [
@@ -66,5 +69,9 @@
     <footer>
         <p>&copy; 2025 Cartridge Classics. All rights reserved.</p>
     </footer>
+
+    <script src="scripts/api.js"></script>
+    <script src="scripts/admin.js"></script>
 </body>
+
 </html>

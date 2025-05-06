@@ -1,20 +1,18 @@
+// Fixed productRoutes.js
 const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
 
-// Product viewing routes
-router.get('/products', productController.getAllProducts);
-router.get('/products/:id', productController.getProductById);
-router.get('/search', productController.searchProducts);
-
-// Cart routes (stubbed for now)
-router.post('/cart/add', productController.addToCart);
-router.post('/cart/remove', productController.removeFromCart);
-router.post('/checkout', productController.checkout);
+// Order matters for routes
+// Public routes
+router.get('/search', productController.searchProducts); 
+router.get('/', productController.getAllProducts);
+router.get('/:id', productController.getProductById);
 
 // Admin routes
-router.post('/admin/products', productController.addProduct);
-router.put('/admin/products/:id', productController.editProduct);
-router.post('/admin/products/bulk', productController.bulkUpload);
+router.post('/', productController.addProduct);
+router.put('/:id', productController.editProduct);
+router.post('/bulkUpload', productController.bulkUpload);
+router.delete('/:id', productController.deleteProduct);
 
 module.exports = router;

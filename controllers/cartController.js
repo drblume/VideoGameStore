@@ -4,8 +4,10 @@ const USER_ID = 1; // Placeholder user ID for now
 exports.getCart = async (req, res) => {
   try {
     const cart = await cartModel.getCartByUserId(USER_ID);
-    res.json(cart);
+    console.log("Cart data:", cart); // 🔍 Log it
+    res.json(cart || []);            // ✅ Always send a JSON array
   } catch (err) {
+    console.error("Error in getCart:", err);
     res.status(500).json({ error: err.message });
   }
 };

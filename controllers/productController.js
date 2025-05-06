@@ -1,12 +1,22 @@
 const productModel = require('../models/productModel');
 
-// View all products
 exports.getAllProducts = async (req, res) => {
   try {
     const products = await productModel.getAllProducts();
     res.json(products);
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+};
+
+exports.deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    await productModel.deleteProduct(id);
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Delete error:', err);
+    res.status(500).json({ error: 'Failed to delete product' });
   }
 };
 
@@ -23,10 +33,12 @@ exports.getProductById = async (req, res) => {
 // Search products
 exports.searchProducts = async (req, res) => {
   try {
-    const products = await productModel.searchProducts(req.query);
-    res.json(products);
+    const { name } = req.query;
+    const results = await productModel.searchProducts({ name });
+    res.json(results);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    console.error('Search error:', err);
+    res.status(500).json({ error: 'Failed to search products' });
   }
 };
 
@@ -66,11 +78,14 @@ exports.editProduct = async (req, res) => {
 };
 
 // Admin: Bulk upload
+
 exports.bulkUpload = async (req, res) => {
   try {
-    const result = await productModel.bulkUpload(req.body.products);
-    res.json({ message: 'Bulk upload successful', count: result.inserted });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
+    const products = req.body;
+    const result = await productModel.bulkUpload(products);
+    res.status(200).json({ success: true, ...result });
+  } catch (error) {
+    console.error('Bulk upload error:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 };
